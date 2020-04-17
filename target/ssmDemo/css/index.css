@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.indexPage{
+    height: 625px;
+    width: 100%;
+    background:url(../picture/indexBG.jpg) no-repeat center top;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.indexPage h1{
+    margin-top: 10%;
+    display: block;
+}
+
+
+.subForm{
+    width: fit-content;
+    height: fit-content;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.subForm h3{
+    display: inline-block;
+}
+
+.subForm form div{
+    width: 100%;
+    margin-top: 10%;
+}
+
+.buttonBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textInput{
+    height: 22px;
+}
+
+.button{
+    height: 35px;
+    width: 70px;
+    color: white;
+    background-color: rgba(99, 99, 99, 0.4);
+}
+
+.loginButton{
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+.indexPage {
+    height: 625px;
+    width: 100%;
+    background: url(../picture/indexBG.jpg) no-repeat center top;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#time{
+    display: inline-block;
+}
+
+h3{
+    margin-top: 20px;
+}

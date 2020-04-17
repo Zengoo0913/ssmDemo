@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zjitc.dao.UserDao">
+
+    <select id="doLogin" parameterType="String" resultType="com.zjitc.bean.User">
+        select * from tb_user where username = #{username}
+    </select>
+
+    <insert id="doRegist" parameterType="com.zjitc.bean.User">
+        insert into tb_user (username,password) values (#{username},#{password})
+    </insert>
+
+    <update id="setPassword" parameterType="String">
+        update tb_user set password = #{password} where username = #{username}
+    </update>
+
+    <resultMap id="userList" type="com.zjitc.bean.User">
+        <id property="uId" column="uId"/>
+        <result property="username" column="username"/>
+        <result property="uName" column="uName"/>
+        <result property="uDev" column="uDev"/>
+        <result property="uLev" column="uLev"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="userList">
+        select * from tb_user
+    </select>
+
+    <delete id="delUser" parameterType="Integer">
+        delete from tb_user where uid=#{uid}
+    </delete>
+
+    <insert id="addUser" parameterType="String">
+        insert into tb_user (username,password,uName,uSex,uAge,uDev,uLev) values (#{username},#{password},#{uName},#{uSex},#{uAge},#{uDev},#{uLev});
+    </insert>
+
+    <update id="updUser" parameterType="String">
+        update tb_user set username = #{username},password = #{password},uName = #{uName},uSex = #{uSex},uAge = #{uAge},uDev = #{uDev},uLev=#{uLev} where uid=#{uid};
+    </update>
+
+</mapper>
